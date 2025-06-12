@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Pizza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #d9534f;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #c9302c;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pedido Pizza</h1>
+    <form method="post" action="teste.jsp">
+        Nome: <input type="text" name="nome" id="nome"> 
+        <br>
+        Email: <input type="email" name="email" id="email">
+        <br>
+        Tamanho: 
+        <input type="radio" name="tamanho" value="g" id="" checked> Grande
+        <input type="radio" name="tamanho" value="m" id=""> Média
+        <input type="radio" name="tamanho" value="p" id=""> Pequena
+        <br>
+        <select name="sabor" id="">
+            <option value="">Calabresa</option>
+            <option value="">Frango</option>
+            <option value="">Queijo</option>
+            <option value="">Carne</option>
+            <option value="">Misto</option>
+        </select>
+        <br>
+        Adicionais:
+        <input type="checkbox" name="borda" value="sim"> Borda
+        <input type="checkbox" name="queijo" value="sim"> Queijo Extra
+        <br>
+        Data Entrega:
+        <input type="date" name="dataEntrega" id="data">
+        <br>
+        Comentário: <textarea name="mensagem" id="" rows="10" cols="30"></textarea>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
